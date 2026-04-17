@@ -3,344 +3,291 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laser Scanning | Website Brief</title>
+  <title>Laser Scanning | Project Brief</title>
   <style>
-    :root {
-      --bg: #f4f7fa;
-      --panel: #ffffff;
-      --panel-alt: #f8fbfd;
-      --text: #15202b;
-      --muted: #5d6a76;
-      --line: #d9e2ea;
-      --brand: #d62828;
-      --dark: #0f1720;
-      --shadow: 0 12px 28px rgba(15, 23, 32, 0.06);
-      --radius: 18px;
-      --max: 1080px;
+    :root{
+      --bg:#f3f6f9;
+      --panel:#ffffff;
+      --panel-soft:#f7fafc;
+      --text:#15202b;
+      --muted:#61707c;
+      --line:#d8e1e8;
+      --brand:#c92020;
+      --nav:#0f1720;
+      --shadow:0 12px 30px rgba(15,23,32,.07);
+      --radius:20px;
+      --max:1080px;
     }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#f5f8fb 0%, #eef3f7 100%);
+      color:var(--text);
+      line-height:1.6;
     }
-
-    a { color: inherit; }
-
-    .topbar {
-      background: var(--dark);
-      color: #fff;
-      padding: 14px 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+    a{text-decoration:none;color:inherit}
+    .project-nav{
+      background:var(--nav);
+      color:#fff;
+      padding:14px 20px;
     }
-
-    .topbar-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    .project-nav-inner,.wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
     }
-
-    .project-name {
-      font-weight: 700;
-      letter-spacing: 0.02em;
+    .project-nav-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
     }
-
-    .topnav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
+    .project-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
     }
+    .project-links a{opacity:.9}
+    .project-links a:hover{opacity:1;text-decoration:underline}
 
-    .topnav a {
-      text-decoration: none;
-      color: #fff;
-      opacity: 0.9;
+    .wrap{padding-top:34px;padding-bottom:46px}
+    .hero{
+      background:
+        radial-gradient(circle at top right, rgba(201,32,32,.08), transparent 28%),
+        linear-gradient(180deg,#ffffff 0%, #f8fbfd 100%);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:36px;
+      margin-bottom:24px;
     }
-
-    .topnav a:hover {
-      opacity: 1;
-      text-decoration: underline;
+    .eyebrow{
+      display:inline-block;
+      padding:8px 11px;
+      border-radius:999px;
+      border:1px solid #f0c8c8;
+      background:#fff2f2;
+      color:var(--brand);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      font-weight:700;
+      margin-bottom:16px;
     }
-
-    .wrap {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 34px 20px 46px;
+    h1,h2,h3,p{margin-top:0}
+    h1{
+      font-size:44px;
+      line-height:1.05;
+      margin-bottom:14px;
     }
-
-    .hero {
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 34px;
-      box-shadow: var(--shadow);
-      margin-bottom: 24px;
+    h2{
+      font-size:30px;
+      line-height:1.14;
+      margin-bottom:10px;
     }
-
-    .eyebrow {
-      display: inline-block;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 700;
-      color: var(--brand);
-      background: #fff3f3;
-      border: 1px solid #f5c9c9;
-      border-radius: 999px;
-      padding: 7px 10px;
-      margin-bottom: 16px;
+    h3{
+      font-size:20px;
+      line-height:1.25;
+      margin-bottom:8px;
     }
-
-    h1, h2, h3, p {
-      margin-top: 0;
+    .lead{
+      font-size:19px;
+      color:var(--muted);
+      max-width:840px;
     }
-
-    h1 {
-      font-size: 42px;
-      line-height: 1.08;
-      margin-bottom: 14px;
+    .section{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+      margin-bottom:22px;
     }
-
-    h2 {
-      font-size: 29px;
-      line-height: 1.15;
-      margin-bottom: 10px;
+    .grid-2,.grid-3,.grid-5{
+      display:grid;
+      gap:16px;
+      margin-top:18px;
     }
-
-    h3 {
-      font-size: 20px;
-      line-height: 1.25;
-      margin-bottom: 8px;
+    .grid-2{grid-template-columns:1fr 1fr}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-5{grid-template-columns:repeat(5,1fr)}
+    .mini{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:var(--panel-soft);
+      padding:18px;
     }
-
-    .lead {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 860px;
+    .mini p{color:var(--muted)}
+    .muted{color:var(--muted)}
+    .quote{
+      border-left:4px solid var(--brand);
+      background:#fffdfd;
+      padding:14px 0 14px 16px;
+      border-radius:0 12px 12px 0;
+      margin-top:16px;
+      font-size:18px;
     }
-
-    .section {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: var(--shadow);
-      margin-bottom: 22px;
+    .link-card{
+      display:block;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      background:var(--panel-soft);
+      transition:.2s ease;
     }
-
-    .grid-2,
-    .grid-3,
-    .grid-5 {
-      display: grid;
-      gap: 18px;
-      margin-top: 18px;
+    .link-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .link-url{
+      color:var(--brand);
+      font-size:14px;
+      word-break:break-word;
+      margin-top:10px;
     }
-
-    .grid-2 { grid-template-columns: 1fr 1fr; }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-5 { grid-template-columns: repeat(5, 1fr); }
-
-    .mini {
-      border: 1px solid var(--line);
-      background: var(--panel-alt);
-      border-radius: 14px;
-      padding: 18px;
+    ul{
+      margin:0;
+      padding-left:18px;
     }
-
-    .muted {
-      color: var(--muted);
+    li{
+      margin-bottom:8px;
+      color:var(--muted);
     }
-
-    ul {
-      margin: 0;
-      padding-left: 18px;
+    .tag-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:14px;
     }
-
-    li {
-      margin-bottom: 8px;
-      color: var(--muted);
+    .tag{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:7px 10px;
+      background:#eef3f7;
+      font-size:13px;
     }
-
-    .link-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--panel-alt);
-      padding: 18px;
-      transition: 0.2s ease;
+    .footer-note{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      padding-top:6px;
     }
-
-    .link-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
+    @media (max-width:980px){
+      .grid-5,.grid-3,.grid-2{grid-template-columns:1fr 1fr}
+      h1{font-size:36px}
     }
-
-    .link-url {
-      color: var(--brand);
-      word-break: break-word;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .tag {
-      display: inline-block;
-      border: 1px solid var(--line);
-      background: #eef3f7;
-      border-radius: 999px;
-      padding: 7px 10px;
-      font-size: 13px;
-    }
-
-    .quote {
-      border-left: 4px solid var(--brand);
-      padding: 12px 0 12px 16px;
-      background: #fffdfd;
-      border-radius: 0 12px 12px 0;
-      font-size: 18px;
-      margin-top: 16px;
-    }
-
-    .footer-note {
-      text-align: center;
-      font-size: 14px;
-      color: var(--muted);
-      padding-top: 8px;
-    }
-
-    @media (max-width: 980px) {
-      .grid-5,
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .grid-5,
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .hero,
-      .section {
-        padding: 22px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      h2 {
-        font-size: 25px;
-      }
+    @media (max-width:720px){
+      .grid-5,.grid-3,.grid-2{grid-template-columns:1fr}
+      .hero,.section{padding:22px}
+      h1{font-size:31px}
+      h2{font-size:25px}
+      .lead{font-size:17px}
     }
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="project-name">Laser Scanning Project</div>
-      <nav class="topnav">
+  <div class="project-nav">
+    <div class="project-nav-inner">
+      <div><strong>Laser Scanning Project</strong></div>
+      <div class="project-links">
         <a href="./index.html">Wireframe</a>
         <a href="./brief.html">Brief</a>
-      </nav>
+      </div>
     </div>
   </div>
 
   <div class="wrap">
     <section class="hero">
-      <div class="eyebrow">Website redesign brief</div>
-      <h1>Laser Scanning</h1>
-      <p class="lead">Redesign the website to improve organic enquiries, convert referrals more effectively and position the business as a complete engineering solutions provider rather than only a scanning company.</p>
+      <div class="eyebrow">Project brief</div>
+      <h1>Website redesign brief for Laser Scanning</h1>
+      <p class="lead">The site needs to do a better job of positioning the business as a complete engineering support partner, improving organic enquiries and helping referred visitors feel confident enough to get in touch quickly.</p>
 
       <div class="grid-3">
         <div class="mini">
-          <h3>Primary objective</h3>
-          <p class="muted">Make the business easier to understand, easier to trust and easier to contact.</p>
+          <h3>Main commercial goal</h3>
+          <p>Improve the quality and quantity of enquiries that come through the website.</p>
         </div>
         <div class="mini">
-          <h3>Main business context</h3>
-          <p class="muted">Most work comes from repeat customers and recommendations, but the website still needs to improve organic enquiry generation.</p>
+          <h3>Main messaging goal</h3>
+          <p>Show that the business offers far more than standalone laser scanning.</p>
         </div>
         <div class="mini">
-          <h3>Platform direction</h3>
-          <p class="muted">Design in Figma. Build direction is Webflow, using the wireframe and references below to guide the final site.</p>
+          <h3>Main UX goal</h3>
+          <p>Make the site easier to understand, trust and act on.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Reference links</div>
-      <h2>Project references</h2>
+      <div class="eyebrow">Reference material</div>
+      <h2>What to use as guidance</h2>
       <div class="grid-2">
         <a class="link-card" href="https://laserscanninguk.github.io/laser-scanning-development/" target="_blank" rel="noopener noreferrer">
           <h3>Live wireframe</h3>
-          <p class="muted">Use this as the primary reference for homepage structure, content hierarchy and overall user flow.</p>
+          <p class="muted">Use this as the main structural reference for the homepage and overall content hierarchy.</p>
           <div class="link-url">https://laserscanninguk.github.io/laser-scanning-development/</div>
         </a>
 
         <a class="link-card" href="https://gzdzfbre.elementor.cloud/" target="_blank" rel="noopener noreferrer">
           <h3>Elementor reference</h3>
-          <p class="muted">Use this mainly for layout inspiration, spacing and visual rhythm, not for messaging or business positioning.</p>
+          <p class="muted">Use this only as inspiration for spacing, rhythm and section layout, not as a messaging template.</p>
           <div class="link-url">https://gzdzfbre.elementor.cloud/</div>
         </a>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Core problem</div>
-      <h2>The current website does not communicate the full business clearly enough</h2>
-      <p class="lead">Visitors do not immediately understand the breadth of capability, the wider engineering support offering or the best next step. The new site needs to validate trust quickly for referred traffic while also improving conversion from organic visitors.</p>
-      <div class="quote">
-        Within 5 seconds, a visitor should understand that Laser Scanning can help capture, understand, validate and manufacture parts, and that it is easy to send a project over for review.
+      <div class="eyebrow">Core issue</div>
+      <h2>The site currently undersells the business</h2>
+      <p class="lead">The main issue is not that the company lacks capability. It is that the current website does not communicate that capability clearly enough, quickly enough, or in a way that helps the right visitors identify themselves.</p>
+      <div class="quote">A visitor should not leave the site thinking “they do scanning.” They should leave thinking “they can probably solve my engineering problem.”</div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Business context</div>
+      <h2>How the website fits the real business</h2>
+      <div class="grid-3">
+        <div class="mini">
+          <h3>Repeat work matters</h3>
+          <p>Most business comes from existing customers, so the site must support credibility and make repeat contact easy.</p>
+        </div>
+        <div class="mini">
+          <h3>Referrals matter</h3>
+          <p>A lot of visitors will already have heard of the company, so the site needs to validate trust fast.</p>
+        </div>
+        <div class="mini">
+          <h3>Organic growth still matters</h3>
+          <p>The site should also attract better new enquiries from people actively searching for solutions.</p>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="eyebrow">Positioning</div>
-      <h2>What the business should feel like</h2>
+      <h2>What the business should be positioned as</h2>
       <div class="grid-2">
         <div class="mini">
-          <h3>Not just a scanning company</h3>
-          <p class="muted">The website should move away from presenting the business as a narrow service provider.</p>
+          <h3>Not this</h3>
+          <ul>
+            <li>Just a laser scanning company</li>
+            <li>A narrow sector specialist</li>
+            <li>A tool-led technical supplier</li>
+          </ul>
         </div>
         <div class="mini">
-          <h3>A one-stop engineering solutions provider</h3>
-          <p class="muted">The business should feel capable of supporting the wider engineering journey, from data capture through to manufacture and project support.</p>
+          <h3>More like this</h3>
+          <ul>
+            <li>A one-stop engineering support partner</li>
+            <li>A business that solves real project problems</li>
+            <li>A team that can capture, recreate, inspect and help manufacture parts</li>
+          </ul>
         </div>
       </div>
-      <div class="quote">
-        Lead with engineering problems and outcomes first. Support those with methods, tools and capability, not the other way around.
-      </div>
+      <div class="quote">Lead with problems and outcomes. Use tools and processes as supporting proof, not as the main story.</div>
     </section>
 
     <section class="section">
       <div class="eyebrow">Capability structure</div>
-      <h2>Group the business into clear top-level service buckets</h2>
-      <p class="lead">The website needs to simplify a broad offering into a structure that users can understand quickly, while still allowing room for detailed pages underneath.</p>
-
+      <h2>Organise the offering into clear top-level groups</h2>
       <div class="grid-5">
         <div class="mini">
           <h3>Data Capture</h3>
@@ -352,106 +299,84 @@
             <li>CT scanning</li>
           </ul>
         </div>
-
         <div class="mini">
           <h3>Reverse Engineering</h3>
           <ul>
-            <li>Simple to highly complex CAD</li>
-            <li>Legacy parts</li>
+            <li>Simple to complex CAD</li>
+            <li>Legacy components</li>
             <li>Design intent modelling</li>
-            <li>Replica methods where CT is not suitable</li>
+            <li>Replica methods</li>
           </ul>
         </div>
-
         <div class="mini">
           <h3>Inspection &amp; Validation</h3>
           <ul>
-            <li>GD&amp;T work</li>
+            <li>GD&amp;T</li>
             <li>High-accuracy inspection</li>
             <li>Full ISIRs</li>
-            <li>Advanced reporting outputs</li>
+            <li>Dimensional reporting</li>
           </ul>
         </div>
-
         <div class="mini">
           <h3>Manufacturing &amp; Prototyping</h3>
           <ul>
-            <li>3D printing: FDM, SLA, SLS</li>
+            <li>FDM, SLA, SLS</li>
             <li>CNC machining</li>
             <li>Injection moulding</li>
-            <li>Zinc die casting</li>
-            <li>Vac forming and more</li>
+            <li>Die casting / vac forming</li>
           </ul>
         </div>
-
         <div class="mini">
           <h3>Engineering Support</h3>
           <ul>
             <li>DFM</li>
             <li>Supplier sourcing</li>
-            <li>Manufacturing advice</li>
-            <li>Supporting partners</li>
-            <li>End-to-end project assistance</li>
+            <li>Partner support</li>
+            <li>General engineering advice</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Target users</div>
-      <h2>Who the site needs to work for</h2>
+      <div class="eyebrow">Audience</div>
+      <h2>Who the site has to work for</h2>
       <div class="grid-3">
         <div class="mini">
-          <h3>Referral visitors</h3>
-          <p class="muted">Already have some level of trust, but use the website to validate credibility and confirm capability.</p>
+          <h3>Referral traffic</h3>
+          <p>Needs fast reassurance and proof that the business is credible and capable.</p>
         </div>
         <div class="mini">
-          <h3>Organic search visitors</h3>
-          <p class="muted">Have a specific engineering problem and are looking for the right route forward, not just a particular piece of equipment.</p>
+          <h3>Search traffic</h3>
+          <p>Needs clear answers to a specific engineering problem, often before caring which tools are used.</p>
         </div>
         <div class="mini">
           <h3>Existing customers</h3>
-          <p class="muted">Already trust the business and simply need a fast, low-friction way to send another enquiry or upload files.</p>
+          <p>Need a fast, low-friction route to submit new jobs or start another conversation.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Homepage direction</div>
-      <h2>Use the live wireframe as the primary structure</h2>
-      <p class="lead">The live wireframe should guide the homepage layout and user flow. The Elementor site should be treated as secondary inspiration for spacing, section separation and general presentation style.</p>
-
-      <div class="grid-3">
+      <div class="eyebrow">Homepage requirements</div>
+      <h2>What the homepage must do well</h2>
+      <div class="grid-2">
         <div class="mini">
-          <h3>Homepage goals</h3>
+          <h3>Functional goals</h3>
           <ul>
-            <li>Show breadth of capability without becoming confusing</li>
+            <li>Show breadth of capability clearly</li>
             <li>Build trust quickly</li>
-            <li>Help users recognise their problem</li>
-            <li>Make contact feel easy</li>
+            <li>Make contact easy</li>
+            <li>Guide users deeper into the site</li>
           </ul>
         </div>
-
         <div class="mini">
-          <h3>Key sections</h3>
+          <h3>Content goals</h3>
           <ul>
-            <li>Hero</li>
-            <li>Trust strip</li>
-            <li>How we help</li>
-            <li>Core capability groups</li>
-            <li>Use cases</li>
-            <li>Case study</li>
-            <li>Final CTA</li>
-          </ul>
-        </div>
-
-        <div class="mini">
-          <h3>Key message</h3>
-          <ul>
-            <li>We solve engineering problems</li>
-            <li>We support the full process</li>
-            <li>We work across many sectors</li>
-            <li>We are easy to engage with</li>
+            <li>Present the business as problem-solving, not tool-selling</li>
+            <li>Use stronger use cases</li>
+            <li>Use better proof through case studies</li>
+            <li>Reduce generic engineering wording</li>
           </ul>
         </div>
       </div>
@@ -459,35 +384,37 @@
 
     <section class="section">
       <div class="eyebrow">Sector positioning</div>
-      <h2>Show range without pretending to be specialists in every market</h2>
+      <h2>Show range without pretending to be experts in every market</h2>
+      <p class="lead">The business works across many sectors. That is a strength, but it should be positioned carefully.</p>
       <div class="grid-2">
         <div class="mini">
-          <h3>Positioning approach</h3>
-          <p class="muted">The website should position the business as adaptable, technically capable and focused on understanding the engineering challenge and the client’s required outcome.</p>
-          <div class="tag-list">
+          <h3>Recommended message</h3>
+          <p>The company focuses on understanding the engineering challenge and adapting the solution to the client’s required outcome, regardless of sector.</p>
+          <div class="tag-row">
             <span class="tag">Automotive</span>
             <span class="tag">Infrastructure</span>
             <span class="tag">Manufacturing</span>
             <span class="tag">Energy</span>
             <span class="tag">Industrial Equipment</span>
-            <span class="tag">Specialist Projects</span>
           </div>
         </div>
-
         <div class="mini">
-          <h3>Important note</h3>
-          <p class="muted">Avoid building weak generic sector pages that say very little. Use real case studies, use cases and examples to show sector range and capability instead.</p>
+          <h3>What to avoid</h3>
+          <ul>
+            <li>Weak generic industry pages</li>
+            <li>Over-claiming expertise everywhere</li>
+            <li>Using sectors as the main site structure</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Organic enquiry growth</div>
-      <h2>Build search visibility around real engineering problems</h2>
-      <p class="lead">Organic growth should come from pages that reflect real buyer intent and technically credible services, not generic awareness content.</p>
+      <div class="eyebrow">Organic growth</div>
+      <h2>Build pages around real engineering intent</h2>
       <div class="grid-2">
         <div class="mini">
-          <h3>Examples of strong page topics</h3>
+          <h3>Examples of strong page ideas</h3>
           <ul>
             <li>Reverse engineering without CAD</li>
             <li>High-accuracy GD&amp;T inspection</li>
@@ -498,70 +425,58 @@
           </ul>
         </div>
         <div class="mini">
-          <h3>Why this matters</h3>
-          <p class="muted">These pages attract higher-intent traffic and support better-quality enquiries than vague educational posts or very broad service descriptions.</p>
+          <h3>Why this is better</h3>
+          <p>These page ideas align with serious buyer intent and are far more likely to bring relevant enquiries than broad awareness content.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Design and UX direction</div>
-      <h2>What the final site should feel like</h2>
-      <div class="grid-2">
+      <div class="eyebrow">Design direction</div>
+      <h2>How the final site should feel</h2>
+      <div class="grid-3">
         <div class="mini">
-          <h3>Design direction</h3>
-          <ul>
-            <li>Clean</li>
-            <li>Structured</li>
-            <li>Technical but clear</li>
-            <li>Confident, not flashy</li>
-            <li>Built around real visuals</li>
-            <li>Consistent across pages</li>
-          </ul>
+          <h3>Visual direction</h3>
+          <p>Clean, technical, structured, confident, not flashy.</p>
         </div>
-
         <div class="mini">
-          <h3>UX principles</h3>
-          <ul>
-            <li>Make the next step obvious</li>
-            <li>Reduce friction to contact</li>
-            <li>Show credibility early</li>
-            <li>Help visitors self-identify quickly</li>
-            <li>Balance breadth of service with clarity</li>
-          </ul>
+          <h3>Content direction</h3>
+          <p>Clearer, less generic, more grounded in real work and believable use cases.</p>
+        </div>
+        <div class="mini">
+          <h3>UX direction</h3>
+          <p>Make the next step obvious and reduce friction at every stage.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Success criteria</div>
+      <div class="eyebrow">Success measures</div>
       <h2>How success should be judged</h2>
       <div class="grid-3">
         <div class="mini">
-          <h3>More website enquiries</h3>
-          <p class="muted">Especially from organic traffic and referred visitors.</p>
+          <h3>Better enquiries</h3>
+          <p>More relevant leads from both referrals and organic search.</p>
         </div>
         <div class="mini">
           <h3>Lower bounce rate</h3>
-          <p class="muted">Visitors should understand the offer faster and stay engaged for longer.</p>
+          <p>Visitors understand the offer faster and engage with more of the site.</p>
         </div>
         <div class="mini">
           <h3>Stronger positioning</h3>
-          <p class="muted">The business should feel like a capable engineering partner, not a narrow specialist supplier.</p>
+          <p>The company feels like an engineering partner rather than just a supplier of scanning services.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="eyebrow">Summary</div>
-      <h2>Simple direction for the project</h2>
-      <div class="quote">
-        Use the live wireframe for structure, use the Elementor reference for layout inspiration, and make the final site obvious, capable and easy to act on.
-      </div>
+      <h2>Simple design direction</h2>
+      <div class="quote">Use the wireframe for structure, the Elementor site for visual inspiration only, and make the final site clearer, more confident and more useful to real buyers.</div>
     </section>
 
     <div class="footer-note">
-      Prepared as a standalone HTML brief so it can be uploaded directly to GitHub Pages and reviewed alongside the wireframe.
+      This page should feel like a strategy document, not another homepage. Its job is to guide the design work and keep the project focused.
     </div>
   </div>
 </body>
