@@ -3,528 +3,541 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laser Scanning Homepage Wireframe</title>
+  <title>Laser Scanning Website Brief</title>
   <style>
     :root {
-      --bg: #f5f7fa;
-      --panel: #ffffff;
-      --line: #d7dee7;
-      --text: #1f2937;
-      --muted: #5b6573;
-      --accent: #1f6feb;
-      --soft: #eef4ff;
-      --tag: #eef2f7;
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #18212b;
+      --muted: #5f6b76;
+      --line: #d8e0e8;
+      --accent: #d62828;
+      --accent-soft: #fff1f1;
+      --dark: #101820;
+      --success: #0f766e;
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
-    .container {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .site-note {
-      background: #111827;
+    .topbar {
+      background: var(--dark);
       color: #fff;
-      padding: 12px 16px;
+      padding: 12px 20px;
       font-size: 14px;
       text-align: center;
     }
 
-    header {
-      background: var(--panel);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
     }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
+    .hero {
+      padding: 42px 0 28px;
     }
 
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
+    .hero-card {
+      background: linear-gradient(135deg, #ffffff 0%, #fbfcfd 100%);
       border: 1px solid var(--line);
-      color: var(--text);
-      background: white;
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: 0 10px 28px rgba(16, 24, 32, 0.06);
     }
 
-    .btn.primary {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #f3c2c2;
+      margin-bottom: 16px;
     }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 42px;
+      line-height: 1.08;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 840px;
+    }
+
+    .meta-grid,
+    .grid-2,
+    .grid-3,
+    .grid-5 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .meta-grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 24px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-5 { grid-template-columns: repeat(5, 1fr); }
 
     .section {
-      padding: 34px 0;
+      padding: 14px 0 24px;
     }
 
-    .wire {
-      background: var(--panel);
-      border: 2px dashed var(--line);
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(16, 24, 32, 0.04);
+    }
+
+    .meta-card {
+      background: #fff;
+      border: 1px solid var(--line);
       border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      padding: 18px;
     }
 
     .label {
-      display: inline-block;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--accent);
-      background: var(--soft);
-      border: 1px solid #cddcff;
-      border-radius: 999px;
-      padding: 6px 10px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
-    h1, h2, h3, p { margin-top: 0; }
-    h1 { font-size: 42px; line-height: 1.1; margin-bottom: 14px; }
-    h2 { font-size: 28px; margin-bottom: 10px; }
-    h3 { font-size: 18px; margin-bottom: 8px; }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
     .muted { color: var(--muted); }
-    .small { font-size: 14px; }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .hero-card, .mock-visual, .card, .mini {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 18px;
-    }
-
-    .mock-visual {
-      min-height: 340px;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      gap: 12px;
-      background: linear-gradient(180deg, #fbfdff 0%, #f2f7fc 100%);
-    }
-
-    .mock-box {
-      border: 2px dashed #b9c7d8;
-      border-radius: 14px;
-      padding: 14px;
+    .tag-row {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .cta-row, .button-row {
-      display: flex;
-      gap: 12px;
       flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    .stat {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px;
-      background: #fcfdff;
-    }
-
-    .logo-strip {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .logo-box {
-      border: 2px dashed var(--line);
-      border-radius: 12px;
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      background: #fbfcfe;
-      text-align: center;
-      padding: 8px;
-    }
-
-    .journey {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 16px;
-    }
-
-    .arrow::after {
-      content: "→";
-      float: right;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .grid-5 {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-      margin-top: 16px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 16px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 16px;
+      gap: 10px;
+      margin-top: 12px;
     }
 
     .tag {
       display: inline-block;
-      background: var(--tag);
-      border: 1px solid var(--line);
-      padding: 7px 10px;
+      padding: 8px 11px;
       border-radius: 999px;
+      background: #f3f6f9;
+      border: 1px solid var(--line);
       font-size: 13px;
-      margin: 6px 6px 0 0;
       color: var(--text);
     }
 
-    .list {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
+    .link-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .footer-cta {
-      text-align: center;
-      padding: 40px 24px;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-      border: 2px dashed var(--line);
-      border-radius: 20px;
+    .link-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(16, 24, 32, 0.08);
     }
 
-    footer {
-      padding: 30px 0 50px;
+    .link-url {
+      font-size: 14px;
+      color: var(--accent);
+      word-break: break-all;
+    }
+
+    .quote {
+      border-left: 4px solid var(--accent);
+      padding: 14px 0 14px 16px;
+      font-size: 18px;
+      color: var(--text);
+      background: #fff;
+      border-radius: 0 14px 14px 0;
+    }
+
+    .success {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 26px 0 40px;
       color: var(--muted);
       font-size: 14px;
+      text-align: center;
     }
 
-    @media (max-width: 1000px) {
-      .hero,
+    @media (max-width: 960px) {
+      .meta-grid,
       .grid-5,
-      .journey,
-      .logo-strip,
       .grid-3,
-      .grid-2,
-      .stats {
+      .grid-2 {
         grid-template-columns: 1fr 1fr;
       }
+      h1 { font-size: 36px; }
     }
 
-    @media (max-width: 700px) {
-      h1 { font-size: 32px; }
-      h2 { font-size: 24px; }
-      .hero,
+    @media (max-width: 680px) {
+      .meta-grid,
       .grid-5,
-      .journey,
-      .logo-strip,
       .grid-3,
-      .grid-2,
-      .stats {
+      .grid-2 {
         grid-template-columns: 1fr;
       }
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .hero-card,
+      .card { padding: 22px; }
+      h1 { font-size: 30px; }
+      h2 { font-size: 24px; }
+      .lead { font-size: 17px; }
     }
   </style>
 </head>
 <body>
-  <div class="site-note">Homepage wireframe for review. This is focused on structure, message hierarchy, and user flow rather than final design styling.</div>
-
-  <header>
-    <div class="container nav">
-      <div class="logo">LASER SCANNING</div>
-      <div class="nav-links">
-        <span>Services</span>
-        <span>Case Studies</span>
-        <span>Capabilities</span>
-        <span>About</span>
-        <span>Contact</span>
-      </div>
-      <a href="#contact" class="btn primary">Upload Files / Request Quote</a>
+  <nav style="background:#101820;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-weight:700;">Laser Scanning Project</div>
+    <div>
+      <a href="index.html" style="color:#fff;margin-right:16px;text-decoration:none;">Wireframe</a>
+      <a href="brief.html" style="color:#fff;text-decoration:none;">Brief</a>
     </div>
-  </header>
+  </nav>
+  <nav style="background:#101820;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-weight:700;">Laser Scanning Project</div>
+    <div>
+      <a href="index.html" style="color:#fff;margin-right:16px;text-decoration:none;">Wireframe</a>
+      <a href="brief.html" style="color:#fff;text-decoration:none;">Brief</a>
+    </div>
+  </nav>
+  <nav style="background:#101820;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
+    <div style="font-weight:700;">Laser Scanning Project</div>
+    <div>
+      <a href="index.html" style="color:#fff;margin-right:16px;text-decoration:none;">Wireframe</a>
+      <a href="brief.html" style="color:#fff;text-decoration:none;">Brief</a>
+    </div>
+  </nav>
+  <div class="topbar">Laser Scanning website redesign brief. Prepared to guide structure, positioning, content priorities and platform direction.</div>
 
-  <main>
-    <section class="section">
-      <div class="container wire">
-        <div class="label">Hero Section</div>
-        <div class="hero">
-          <div class="hero-card">
-            <h1>Engineering solutions powered by scanning, reverse engineering, inspection and manufacturing support</h1>
-            <p class="muted">A one-stop engineering partner for complex parts, legacy components, high-accuracy inspection, prototyping and production support. We work across a wide range of sectors by focusing on the engineering challenge and required outcome.</p>
-            <div class="cta-row">
-              <a href="#contact" class="btn primary">Upload Your Files for a Fast Quote</a>
-              <a href="#services" class="btn">View Capabilities</a>
-            </div>
-            <div class="stats">
-              <div class="stat"><strong>Primary message</strong><br><span class="small muted">We solve engineering problems, not just scanning jobs.</span></div>
-              <div class="stat"><strong>Secondary message</strong><br><span class="small muted">Support from data capture through to manufacture.</span></div>
-              <div class="stat"><strong>User action</strong><br><span class="small muted">Make it easy to send files and start a conversation.</span></div>
-            </div>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Website redesign brief</div>
+        <h1>Laser Scanning</h1>
+        <p class="lead">Redesign the website to improve organic enquiries, convert referrals more effectively and position the business as a complete engineering solutions provider rather than only a scanning company.</p>
+
+        <div class="meta-grid">
+          <div class="meta-card">
+            <div class="label">Primary objective</div>
+            <p>Make the business easier to understand, easier to trust and easier to contact.</p>
           </div>
-          <div class="mock-visual">
-            <div class="mock-box">Placeholder visual: real scan data / mesh visual</div>
-            <div class="mock-box">Placeholder visual: CAD overlay / reverse engineered model</div>
-            <div class="mock-box">Placeholder visual: inspection colour map / report output</div>
+          <div class="meta-card">
+            <div class="label">Main business context</div>
+            <p>Most work comes from repeat customers and recommendations, but the site should improve organic enquiry generation.</p>
+          </div>
+          <div class="meta-card">
+            <div class="label">Platform direction</div>
+            <p>Design in Figma. Build direction is Webflow, using the wireframe and references below to shape the final site.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container wire">
-        <div class="label">Trust Strip</div>
-        <h2>Trusted by leading engineering and manufacturing companies</h2>
-        <p class="muted">This section should reassure referral traffic quickly and validate capability for new visitors.</p>
-        <div class="logo-strip">
-          <div class="logo-box">Client Logo</div>
-          <div class="logo-box">Client Logo</div>
-          <div class="logo-box">Client Logo</div>
-          <div class="logo-box">Client Logo</div>
-          <div class="logo-box">ISO / Accreditation</div>
-        </div>
+      <div class="grid-2">
+        <a class="link-card" href="https://laserscanninguk.github.io/laser-scanning-wireframe/" target="_blank" rel="noopener noreferrer">
+          <div class="label">Live wireframe reference</div>
+          <h3>Homepage structure direction</h3>
+          <p class="muted">Use this as the main reference for section order, content hierarchy and overall user flow.</p>
+          <div class="link-url">https://laserscanninguk.github.io/laser-scanning-wireframe/</div>
+        </a>
+
+        <a class="link-card" href="https://gzdzfbre.elementor.cloud/" target="_blank" rel="noopener noreferrer">
+          <div class="label">Elementor reference</div>
+          <h3>Previous layout inspiration</h3>
+          <p class="muted">Use this mainly for layout ideas, spacing and general visual structure, not for wording or positioning.</p>
+          <div class="link-url">https://gzdzfbre.elementor.cloud/</div>
+        </a>
       </div>
     </section>
 
-    <section class="section" id="services">
-      <div class="container wire">
-        <div class="label">How We Help</div>
-        <h2>From capturing data to delivering production-ready outcomes</h2>
-        <p class="muted">This section explains the wider business model without forcing users to understand every service immediately.</p>
-        <div class="journey">
-          <div class="card arrow">
-            <h3>Capture</h3>
-            <p class="muted">Handheld laser scanning, portable scanning, CMM laser scanning, touch probe CMM and CT scanning.</p>
-          </div>
-          <div class="card arrow">
-            <h3>Design</h3>
-            <p class="muted">Reverse engineering from simple to highly complex parts, including legacy and worn components.</p>
-          </div>
-          <div class="card arrow">
-            <h3>Validate</h3>
-            <p class="muted">Inspection, GD&amp;T, ISIRs, colour maps and high-end validation outputs.</p>
-          </div>
-          <div class="card">
-            <h3>Manufacture</h3>
-            <p class="muted">3D printing, CNC machining, tooling guidance, DFM and supply-chain support.</p>
-          </div>
+    <section class="section">
+      <div class="card">
+        <div class="label">Core problem</div>
+        <h2>The current website does not make the full business obvious quickly enough</h2>
+        <p class="muted">Users are not instantly seeing the full capability, the wider engineering support offering or the best next step. The site needs to validate trust quickly for referrals while also improving conversion for organic visitors.</p>
+        <div class="quote">Within 5 seconds, a visitor should understand that Laser Scanning can help capture, understand, validate and manufacture parts, and that it is easy to send a project over for review.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid-2">
+        <div class="card">
+          <div class="label">Business positioning</div>
+          <h2>What the business is</h2>
+          <p>Laser Scanning should be positioned as a <strong>one-stop engineering solutions provider</strong>.</p>
+          <p class="muted">It is not just a laser scanning company and it should not feel restricted to a small list of core services.</p>
+        </div>
+        <div class="card">
+          <div class="label">Important positioning rule</div>
+          <h2>Lead with problems and outcomes</h2>
+          <p>Do not lead the website with tools or equipment alone.</p>
+          <p class="muted">The site should first communicate the engineering problem being solved, then support that with the right methods, processes and capabilities.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container wire">
-        <div class="label">Core Capability Groups</div>
-        <h2>A complete engineering support offering</h2>
-        <p class="muted">Top-level buckets keep the business easy to understand while allowing detailed service pages underneath.</p>
-        <div class="grid-5">
-          <div class="card">
-            <h3>Data Capture</h3>
-            <p class="muted">Capture accurate geometry from almost any part, assembly or structure.</p>
-            <span class="tag">Handheld</span><span class="tag">Portable</span><span class="tag">CMM Laser</span><span class="tag">Touch Probe</span><span class="tag">CT</span>
-          </div>
-          <div class="card">
-            <h3>Reverse Engineering</h3>
-            <p class="muted">Turn real-world parts into usable CAD across a huge range of complexity.</p>
-            <span class="tag">Parametric CAD</span><span class="tag">Legacy Parts</span><span class="tag">Design Intent</span>
-          </div>
-          <div class="card">
-            <h3>Inspection &amp; Validation</h3>
-            <p class="muted">High-accuracy reporting from standard comparisons to complex GD&amp;T and ISIR requirements.</p>
-            <span class="tag">GD&amp;T</span><span class="tag">ISIR</span><span class="tag">Colour Maps</span>
-          </div>
-          <div class="card">
-            <h3>Manufacturing &amp; Prototyping</h3>
-            <p class="muted">Support for prototypes, low-volume manufacture and outsourced production processes.</p>
-            <span class="tag">FDM</span><span class="tag">SLA</span><span class="tag">SLS</span><span class="tag">CNC</span>
-          </div>
-          <div class="card">
-            <h3>Engineering Support</h3>
-            <p class="muted">DFM, material/process guidance, partner sourcing and project support beyond the files.</p>
-            <span class="tag">DFM</span><span class="tag">Supplier Support</span><span class="tag">Project Guidance</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container wire">
-        <div class="label">Use Cases</div>
-        <h2>Common problems we help solve</h2>
-        <p class="muted">This section should help visitors self-identify quickly and improve conversion from organic traffic.</p>
-        <div class="grid-3">
-          <div class="card">
-            <h3>No CAD available</h3>
-            <p class="muted">Reverse engineer existing parts into production-ready CAD models.</p>
-          </div>
-          <div class="card">
-            <h3>Worn or damaged parts</h3>
-            <p class="muted">Assess design intent and recreate parts for remanufacture or validation.</p>
-          </div>
-          <div class="card">
-            <h3>Need high-end inspection</h3>
-            <p class="muted">Support complex reporting requirements including GD&amp;T and full ISIR outputs.</p>
-          </div>
-          <div class="card">
-            <h3>Internal cavities cannot be destroyed</h3>
-            <p class="muted">Use CT or alternative replica methods where destructive access is not possible.</p>
-          </div>
-          <div class="card">
-            <h3>Need prototype or production route</h3>
-            <p class="muted">Support part manufacture through 3D printing, CNC machining or supplier sourcing.</p>
-          </div>
-          <div class="card">
-            <h3>Large or specialist structures</h3>
-            <p class="muted">Capture and process geometry from larger assemblies and infrastructure work.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container wire">
-        <div class="label">Sector Positioning</div>
-        <h2>We work across a wide range of sectors by focusing on the engineering challenge</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Positioning note</h3>
-            <p class="muted">We are not claiming to be sector specialists in every market. The website should position the business as adaptable and outcome-focused, working closely with each client to understand the technical requirement and end goal.</p>
-          </div>
-          <div class="card">
-            <h3>Example sector references</h3>
-            <p>
-              <span class="tag">Automotive</span>
-              <span class="tag">Manufacturing</span>
-              <span class="tag">Infrastructure</span>
-              <span class="tag">Energy</span>
-              <span class="tag">Industrial Equipment</span>
-              <span class="tag">Specialist One-Off Projects</span>
-            </p>
-            <p class="muted small">Use real examples and case studies rather than empty sector claims.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container wire">
-        <div class="label">Featured Case Study</div>
-        <h2>Show proof of capability, not just service descriptions</h2>
-        <div class="grid-2">
-          <div class="mini">
-            <div class="mock-box" style="min-height: 260px;">Case study image / scan visual / CAD overlay placeholder</div>
-          </div>
-          <div class="card">
-            <h3>Case study layout</h3>
-            <ul class="list">
-              <li>Client challenge / problem</li>
-              <li>What Laser Scanning delivered</li>
-              <li>Outputs supplied</li>
-              <li>Project outcome / why it mattered</li>
+      <div class="card">
+        <div class="label">Main capability groups</div>
+        <h2>Structure the business into clear top-level service buckets</h2>
+        <div class="grid-5" style="margin-top:18px;">
+          <div>
+            <h3>Data capture</h3>
+            <ul>
+              <li>Handheld laser scanning</li>
+              <li>Portable laser scanning</li>
+              <li>CMM laser scanning</li>
+              <li>Touch probe CMM</li>
+              <li>CT scanning</li>
             </ul>
-            <div class="button-row">
-              <a href="#" class="btn">View Case Study</a>
-            </div>
-            <p class="small muted" style="margin-top:14px;">This section is important for referrals. It helps people quickly think, “They’ve done something like my job before.”</p>
+          </div>
+          <div>
+            <h3>Reverse engineering</h3>
+            <ul>
+              <li>Simple to highly complex CAD work</li>
+              <li>Legacy parts</li>
+              <li>Design intent modelling</li>
+              <li>Replica methods where needed</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Inspection &amp; validation</h3>
+            <ul>
+              <li>GD&amp;T work</li>
+              <li>High-accuracy inspection</li>
+              <li>Full ISIRs</li>
+              <li>Advanced reporting</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Manufacturing &amp; prototyping</h3>
+            <ul>
+              <li>3D printing: FDM, SLA, SLS</li>
+              <li>CNC machining</li>
+              <li>Injection moulding</li>
+              <li>Zinc die casting</li>
+              <li>Vac forming and more</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Engineering support</h3>
+            <ul>
+              <li>DFM</li>
+              <li>Supplier sourcing</li>
+              <li>Manufacturing advice</li>
+              <li>Supporting partners</li>
+              <li>End-to-end project assistance</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container wire">
-        <div class="label">Organic Growth Blocks</div>
-        <h2>Content sections that support high-intent search traffic</h2>
-        <div class="grid-3">
-          <div class="card"><h3>Reverse engineering without CAD</h3><p class="muted">Problem-led landing page concept.</p></div>
-          <div class="card"><h3>High-accuracy GD&amp;T inspection</h3><p class="muted">Specialist inspection landing page concept.</p></div>
-          <div class="card"><h3>CT scanning for internal geometry</h3><p class="muted">Capability-led landing page concept.</p></div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="label">Target user 1</div>
+          <h3>Referral visitor</h3>
+          <p class="muted">Already has some trust, but uses the site to validate credibility and check that Laser Scanning can handle their kind of job.</p>
+        </div>
+        <div class="card">
+          <div class="label">Target user 2</div>
+          <h3>Organic search visitor</h3>
+          <p class="muted">Has a specific engineering problem and is looking for the right route forward, not necessarily a specific tool or scanner.</p>
+        </div>
+        <div class="card">
+          <div class="label">Target user 3</div>
+          <h3>Existing customer</h3>
+          <p class="muted">Already trusts the business and simply needs a quick, low-friction way to send another enquiry or upload project files.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="footer-cta">
-          <div class="label">Final CTA</div>
-          <h2>Have a part, file or engineering problem to discuss?</h2>
-          <p class="muted">This area should make contact feel easy and low-friction. Consider quote form, file upload, direct email and phone option.</p>
-          <div class="cta-row" style="justify-content:center;">
-            <a href="#" class="btn primary">Upload Files</a>
-            <a href="#" class="btn">Request a Quote</a>
-            <a href="#" class="btn">Speak to Us</a>
+    <section class="section">
+      <div class="card">
+        <div class="label">Homepage direction</div>
+        <h2>Use the live wireframe as the main homepage structure</h2>
+        <p class="muted">The live wireframe should be used as the primary basis for the homepage layout. The Elementor site should only be used as secondary inspiration for spacing, visual rhythm and general presentation.</p>
+
+        <div class="grid-3" style="margin-top:18px;">
+          <div>
+            <h3>Key homepage goals</h3>
+            <ul>
+              <li>Show breadth of capability without overwhelming the user</li>
+              <li>Build trust fast</li>
+              <li>Help users recognise their problem</li>
+              <li>Make contact feel easy</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Key homepage sections</h3>
+            <ul>
+              <li>Hero</li>
+              <li>Trust strip</li>
+              <li>How we help</li>
+              <li>Core capability groups</li>
+              <li>Use cases</li>
+              <li>Case study</li>
+              <li>Final CTA</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Key homepage message</h3>
+            <ul>
+              <li>We solve engineering problems</li>
+              <li>We support the whole journey</li>
+              <li>We work across many sectors</li>
+              <li>We are easy to engage with</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      Wireframe intent: make a complex engineering business feel clear, capable and easy to engage with. Final design can add brand styling, real visuals, animation and stronger interaction once the structure is approved.
-    </div>
-  </footer>
+    <section class="section">
+      <div class="grid-2">
+        <div class="card">
+          <div class="label">Sector positioning</div>
+          <h2>Do not over-claim sector specialism</h2>
+          <p>Laser Scanning works across a very wide range of sectors and should be positioned as adaptable and outcome-focused.</p>
+          <p class="muted">The business should not pretend to be a deep specialist in every market. Instead, the message should be that the team works closely with each client to understand the engineering challenge and required result.</p>
+          <div class="tag-row">
+            <span class="tag">Automotive</span>
+            <span class="tag">Infrastructure</span>
+            <span class="tag">Manufacturing</span>
+            <span class="tag">Energy</span>
+            <span class="tag">Industrial equipment</span>
+            <span class="tag">Specialist projects</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="label">Organic enquiry growth</div>
+          <h2>Build pages around real problems</h2>
+          <p class="muted">Organic growth should come from pages that match real user intent, not generic awareness content.</p>
+          <ul>
+            <li>Reverse engineering without CAD</li>
+            <li>High-accuracy GD&amp;T inspection</li>
+            <li>CT scanning for internal geometry</li>
+            <li>Large structure scanning</li>
+            <li>Recreating legacy parts</li>
+            <li>Prototype to production support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid-2">
+        <div class="card">
+          <div class="label">Design direction</div>
+          <h2>What the design should feel like</h2>
+          <ul>
+            <li>Clean</li>
+            <li>Structured</li>
+            <li>Technical but clear</li>
+            <li>Confident, not flashy</li>
+            <li>Built around real visuals, not stock imagery</li>
+            <li>Consistent from page to page</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="label">UX principles</div>
+          <h2>What every page needs to do</h2>
+          <ul>
+            <li>Make the next step obvious</li>
+            <li>Reduce friction to contact</li>
+            <li>Show credibility early</li>
+            <li>Help visitors identify their problem quickly</li>
+            <li>Balance breadth of service with clarity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="label">Success criteria</div>
+        <h2>How success should be judged</h2>
+        <div class="grid-3" style="margin-top:18px;">
+          <div>
+            <p class="success">More website enquiries</p>
+            <p class="muted">Especially from organic search and referral traffic.</p>
+          </div>
+          <div>
+            <p class="success">Lower bounce rate</p>
+            <p class="muted">Visitors should understand the offer faster and stay engaged longer.</p>
+          </div>
+          <div>
+            <p class="success">Clearer positioning</p>
+            <p class="muted">The business should feel like a capable engineering partner, not just a scanning supplier.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="label">Summary</div>
+        <h2>Simple direction for the project</h2>
+        <div class="quote">Use the live wireframe for structure, use the Elementor site for layout inspiration, and make the final site obvious, capable and easy to act on.</div>
+      </div>
+    </section>
+
+    <div class="footer">Prepared as a standalone HTML brief so it can be uploaded directly to GitHub Pages for review and sharing.</div>
+  </div>
 </body>
 </html>
