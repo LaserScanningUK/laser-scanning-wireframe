@@ -16,7 +16,7 @@
       --nav:#0f1720;
       --shadow:0 12px 30px rgba(15,23,32,.07);
       --radius:20px;
-      --max:1080px;
+      --max:1100px;
     }
     *{box-sizing:border-box}
     body{
@@ -24,7 +24,7 @@
       font-family:Arial,Helvetica,sans-serif;
       background:linear-gradient(180deg,#f5f8fb 0%, #eef3f7 100%);
       color:var(--text);
-      line-height:1.6;
+      line-height:1.65;
     }
     a{text-decoration:none;color:inherit}
     .project-nav{
@@ -51,17 +51,19 @@
     }
     .project-links a{opacity:.9}
     .project-links a:hover{opacity:1;text-decoration:underline}
-
     .wrap{padding-top:34px;padding-bottom:46px}
+    .hero,.section{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:32px;
+      margin-bottom:22px;
+    }
     .hero{
       background:
         radial-gradient(circle at top right, rgba(201,32,32,.08), transparent 28%),
         linear-gradient(180deg,#ffffff 0%, #f8fbfd 100%);
-      border:1px solid var(--line);
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      padding:36px;
-      margin-bottom:24px;
     }
     .eyebrow{
       display:inline-block;
@@ -78,32 +80,24 @@
     }
     h1,h2,h3,p{margin-top:0}
     h1{
-      font-size:44px;
-      line-height:1.05;
+      font-size:42px;
+      line-height:1.06;
       margin-bottom:14px;
     }
     h2{
-      font-size:30px;
+      font-size:28px;
       line-height:1.14;
       margin-bottom:10px;
     }
     h3{
-      font-size:20px;
-      line-height:1.25;
+      font-size:19px;
+      line-height:1.24;
       margin-bottom:8px;
     }
     .lead{
-      font-size:19px;
+      font-size:18px;
       color:var(--muted);
-      max-width:840px;
-    }
-    .section{
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:28px;
-      margin-bottom:22px;
+      max-width:900px;
     }
     .grid-2,.grid-3,.grid-5{
       display:grid;
@@ -121,6 +115,14 @@
     }
     .mini p{color:var(--muted)}
     .muted{color:var(--muted)}
+    ul{
+      margin:0;
+      padding-left:18px;
+    }
+    li{
+      margin-bottom:8px;
+      color:var(--muted);
+    }
     .quote{
       border-left:4px solid var(--brand);
       background:#fffdfd;
@@ -143,14 +145,6 @@
       font-size:14px;
       word-break:break-word;
       margin-top:10px;
-    }
-    ul{
-      margin:0;
-      padding-left:18px;
-    }
-    li{
-      margin-bottom:8px;
-      color:var(--muted);
     }
     .tag-row{
       display:flex;
@@ -178,8 +172,8 @@
     @media (max-width:720px){
       .grid-5,.grid-3,.grid-2{grid-template-columns:1fr}
       .hero,.section{padding:22px}
-      h1{font-size:31px}
-      h2{font-size:25px}
+      h1{font-size:30px}
+      h2{font-size:24px}
       .lead{font-size:17px}
     }
   </style>
@@ -199,95 +193,121 @@
     <section class="hero">
       <div class="eyebrow">Project brief</div>
       <h1>Website redesign brief for Laser Scanning</h1>
-      <p class="lead">The site needs to do a better job of positioning the business as a complete engineering support partner, improving organic enquiries and helping referred visitors feel confident enough to get in touch quickly.</p>
-
-      <div class="grid-3">
-        <div class="mini">
-          <h3>Main commercial goal</h3>
-          <p>Improve the quality and quantity of enquiries that come through the website.</p>
-        </div>
-        <div class="mini">
-          <h3>Main messaging goal</h3>
-          <p>Show that the business offers far more than standalone laser scanning.</p>
-        </div>
-        <div class="mini">
-          <h3>Main UX goal</h3>
-          <p>Make the site easier to understand, trust and act on.</p>
-        </div>
+      <p class="lead">
+        The aim of this redesign is not just to make the website look better. It is to improve how clearly the business is understood, how confidently it is trusted, and how effectively it turns referrals and organic visitors into enquiries.
+      </p>
+      <div class="quote">
+        The finished website should make Laser Scanning feel like a capable engineering solutions partner that helps clients solve complex problems, not simply a company that owns scanning equipment.
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Reference material</div>
-      <h2>What to use as guidance</h2>
+      <div class="eyebrow">Reference points</div>
+      <h2>Working references for this project</h2>
       <div class="grid-2">
         <a class="link-card" href="https://laserscanninguk.github.io/laser-scanning-development/" target="_blank" rel="noopener noreferrer">
           <h3>Live wireframe</h3>
-          <p class="muted">Use this as the main structural reference for the homepage and overall content hierarchy.</p>
+          <p class="muted">Use this as the main reference for homepage structure, section order, hierarchy and flow.</p>
           <div class="link-url">https://laserscanninguk.github.io/laser-scanning-development/</div>
         </a>
 
         <a class="link-card" href="https://gzdzfbre.elementor.cloud/" target="_blank" rel="noopener noreferrer">
           <h3>Elementor reference</h3>
-          <p class="muted">Use this only as inspiration for spacing, rhythm and section layout, not as a messaging template.</p>
+          <p class="muted">Use this as visual inspiration for spacing, section rhythm and general layout quality only. Do not copy its wording or generic messaging approach.</p>
           <div class="link-url">https://gzdzfbre.elementor.cloud/</div>
         </a>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Core issue</div>
-      <h2>The site currently undersells the business</h2>
-      <p class="lead">The main issue is not that the company lacks capability. It is that the current website does not communicate that capability clearly enough, quickly enough, or in a way that helps the right visitors identify themselves.</p>
-      <div class="quote">A visitor should not leave the site thinking “they do scanning.” They should leave thinking “they can probably solve my engineering problem.”</div>
-    </section>
-
-    <section class="section">
-      <div class="eyebrow">Business context</div>
+      <div class="eyebrow">Business reality</div>
       <h2>How the website fits the real business</h2>
       <div class="grid-3">
         <div class="mini">
-          <h3>Repeat work matters</h3>
-          <p>Most business comes from existing customers, so the site must support credibility and make repeat contact easy.</p>
+          <h3>Repeat business is strong</h3>
+          <p>A large part of the business comes from existing customers returning with more work. The website therefore needs to support trust, reinforce credibility and make it easy for people to send new jobs.</p>
         </div>
         <div class="mini">
-          <h3>Referrals matter</h3>
-          <p>A lot of visitors will already have heard of the company, so the site needs to validate trust fast.</p>
+          <h3>Recommendations matter</h3>
+          <p>Another major source of work comes from referrals. These users often arrive already aware of the business name, but they use the website to validate whether the company looks capable, professional and relevant to their own job.</p>
         </div>
         <div class="mini">
-          <h3>Organic growth still matters</h3>
-          <p>The site should also attract better new enquiries from people actively searching for solutions.</p>
+          <h3>Organic enquiries still need improving</h3>
+          <p>Although referrals and repeat work are important, the website should also do a much better job of attracting and converting new enquiries from organic search.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Core problem</div>
+      <h2>The current website does not communicate the full business clearly enough</h2>
+      <p class="lead">
+        The problem is not a lack of capability. The problem is that the current site does not make the breadth of capability, the quality of work, or the route to enquiry clear enough or quickly enough.
+      </p>
+      <ul>
+        <li>It undersells how broad the business actually is.</li>
+        <li>It risks making the company look like mainly a scanning supplier.</li>
+        <li>It does not fully show the business as a one-stop engineering support partner.</li>
+        <li>It does not help enough users quickly think, “these people can probably help with my exact problem.”</li>
+      </ul>
+      <div class="quote">
+        A visitor should not leave the site thinking “they do laser scanning.” They should leave thinking “they can help solve my engineering problem.”
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Primary objective</div>
+      <h2>What the redesign needs to achieve</h2>
+      <div class="grid-2">
+        <div class="mini">
+          <h3>Commercial objective</h3>
+          <p>Improve the number and quality of website enquiries, especially from organic traffic, while also helping referred visitors convert faster.</p>
+        </div>
+        <div class="mini">
+          <h3>Positioning objective</h3>
+          <p>Reposition the business away from looking like a narrow scanning service and toward looking like a complete engineering support and delivery partner.</p>
+        </div>
+      </div>
+      <div class="quote">
+        Within a few seconds, the site should make it clear what Laser Scanning does, how broad the capability is, and how easy it is to start a project conversation.
       </div>
     </section>
 
     <section class="section">
       <div class="eyebrow">Positioning</div>
-      <h2>What the business should be positioned as</h2>
+      <h2>How the business should be described</h2>
       <div class="grid-2">
         <div class="mini">
-          <h3>Not this</h3>
+          <h3>What the business is not</h3>
           <ul>
-            <li>Just a laser scanning company</li>
-            <li>A narrow sector specialist</li>
-            <li>A tool-led technical supplier</li>
+            <li>Not just a laser scanning company</li>
+            <li>Not just a three-service provider</li>
+            <li>Not a business that should be framed around only one sector like automotive</li>
+            <li>Not a company that should lead purely with tools, machines and equipment</li>
           </ul>
         </div>
         <div class="mini">
-          <h3>More like this</h3>
+          <h3>What the business is</h3>
           <ul>
-            <li>A one-stop engineering support partner</li>
-            <li>A business that solves real project problems</li>
-            <li>A team that can capture, recreate, inspect and help manufacture parts</li>
+            <li>A one-stop engineering solutions provider</li>
+            <li>A business that can capture, recreate, inspect and help manufacture parts</li>
+            <li>A technical partner that helps solve real engineering challenges</li>
+            <li>A flexible company that works across a wide range of sectors by understanding the required outcome</li>
           </ul>
         </div>
       </div>
-      <div class="quote">Lead with problems and outcomes. Use tools and processes as supporting proof, not as the main story.</div>
+      <div class="quote">
+        The site should lead with engineering challenges and outcomes first, then support that with services, methods and tools.
+      </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Capability structure</div>
-      <h2>Organise the offering into clear top-level groups</h2>
+      <div class="eyebrow">Capability breadth</div>
+      <h2>The full offer needs to be represented properly</h2>
+      <p class="lead">
+        The site should reflect that Laser Scanning offers far more than a handful of scanning services. It needs to communicate a broad but structured capability.
+      </p>
+
       <div class="grid-5">
         <div class="mini">
           <h3>Data Capture</h3>
@@ -299,125 +319,148 @@
             <li>CT scanning</li>
           </ul>
         </div>
+
         <div class="mini">
           <h3>Reverse Engineering</h3>
           <ul>
-            <li>Simple to complex CAD</li>
-            <li>Legacy components</li>
+            <li>Simple geometry</li>
+            <li>Complex high-end work</li>
             <li>Design intent modelling</li>
-            <li>Replica methods</li>
+            <li>Legacy part recreation</li>
+            <li>Internal geometry strategies where CT is not suitable</li>
           </ul>
         </div>
+
         <div class="mini">
           <h3>Inspection &amp; Validation</h3>
           <ul>
-            <li>GD&amp;T</li>
-            <li>High-accuracy inspection</li>
+            <li>General inspection work</li>
+            <li>High accuracy GD&amp;T</li>
             <li>Full ISIRs</li>
-            <li>Dimensional reporting</li>
+            <li>Complex reporting outputs</li>
+            <li>High-end dimensional validation</li>
           </ul>
         </div>
+
         <div class="mini">
           <h3>Manufacturing &amp; Prototyping</h3>
           <ul>
-            <li>FDM, SLA, SLS</li>
+            <li>3D printing: FDM, SLA, SLS</li>
             <li>CNC machining</li>
             <li>Injection moulding</li>
-            <li>Die casting / vac forming</li>
+            <li>Zinc die casting</li>
+            <li>Vac forming and more</li>
           </ul>
         </div>
+
         <div class="mini">
           <h3>Engineering Support</h3>
           <ul>
             <li>DFM</li>
-            <li>Supplier sourcing</li>
-            <li>Partner support</li>
-            <li>General engineering advice</li>
+            <li>Manufacturing advice</li>
+            <li>Sourcing manufacturers</li>
+            <li>Supporting partners</li>
+            <li>End-to-end project support</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Audience</div>
-      <h2>Who the site has to work for</h2>
+      <div class="eyebrow">Key messaging principle</div>
+      <h2>Simplify the structure without dumbing the business down</h2>
+      <p class="lead">
+        One of the main design challenges is that the business is broad. If everything is listed equally, the site becomes overwhelming. If it is oversimplified too much, the company becomes undersold.
+      </p>
+      <ul>
+        <li>The site should group capability into clear top-level buckets.</li>
+        <li>It should help users understand the business quickly.</li>
+        <li>It should still leave room for detailed service pages underneath.</li>
+        <li>It should make a complex business feel easy to navigate without reducing the perceived quality of the work.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Target audiences</div>
+      <h2>Who the website must work for</h2>
       <div class="grid-3">
         <div class="mini">
-          <h3>Referral traffic</h3>
-          <p>Needs fast reassurance and proof that the business is credible and capable.</p>
+          <h3>Referral visitors</h3>
+          <p>These users often already have some trust because someone has pointed them toward the business. The site must quickly validate that trust and show strong proof of capability.</p>
         </div>
         <div class="mini">
-          <h3>Search traffic</h3>
-          <p>Needs clear answers to a specific engineering problem, often before caring which tools are used.</p>
+          <h3>Organic search visitors</h3>
+          <p>These users often have a specific engineering problem. They are not necessarily searching for a scanner or a process. They are searching for a route to solve the issue.</p>
         </div>
         <div class="mini">
           <h3>Existing customers</h3>
-          <p>Need a fast, low-friction route to submit new jobs or start another conversation.</p>
+          <p>These users already trust the business. The site should make it very easy for them to send files, ask for help, and start another project quickly.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Homepage requirements</div>
-      <h2>What the homepage must do well</h2>
-      <div class="grid-2">
-        <div class="mini">
-          <h3>Functional goals</h3>
-          <ul>
-            <li>Show breadth of capability clearly</li>
-            <li>Build trust quickly</li>
-            <li>Make contact easy</li>
-            <li>Guide users deeper into the site</li>
-          </ul>
-        </div>
-        <div class="mini">
-          <h3>Content goals</h3>
-          <ul>
-            <li>Present the business as problem-solving, not tool-selling</li>
-            <li>Use stronger use cases</li>
-            <li>Use better proof through case studies</li>
-            <li>Reduce generic engineering wording</li>
-          </ul>
-        </div>
+      <div class="eyebrow">Homepage role</div>
+      <h2>What the homepage specifically needs to do</h2>
+      <ul>
+        <li>Make it obvious that the company is more than just scanning.</li>
+        <li>Build trust quickly through real capability and proof.</li>
+        <li>Show a clear structure to the broader offer.</li>
+        <li>Help users identify with real use cases and problems.</li>
+        <li>Present the business as adaptable across different sectors and project types.</li>
+        <li>Make the next step to contact or upload files feel simple.</li>
+      </ul>
+      <div class="quote">
+        The wireframe should be used as the main structural reference for this. The Elementor reference should only influence layout feel, not content strategy.
       </div>
     </section>
 
     <section class="section">
       <div class="eyebrow">Sector positioning</div>
-      <h2>Show range without pretending to be experts in every market</h2>
-      <p class="lead">The business works across many sectors. That is a strength, but it should be positioned carefully.</p>
+      <h2>How to talk about industries and sectors</h2>
+      <p class="lead">
+        Laser Scanning works across a very wide range of sectors. That is a strength, but it needs to be positioned carefully.
+      </p>
+
       <div class="grid-2">
         <div class="mini">
-          <h3>Recommended message</h3>
-          <p>The company focuses on understanding the engineering challenge and adapting the solution to the client’s required outcome, regardless of sector.</p>
+          <h3>What to communicate</h3>
+          <p>The business does not need to claim deep specialism in every sector. A stronger and more honest position is that the company understands engineering challenges, works closely with the client, and adapts its approach around the required result.</p>
           <div class="tag-row">
             <span class="tag">Automotive</span>
             <span class="tag">Infrastructure</span>
             <span class="tag">Manufacturing</span>
             <span class="tag">Energy</span>
             <span class="tag">Industrial Equipment</span>
+            <span class="tag">Specialist Projects</span>
           </div>
         </div>
+
         <div class="mini">
           <h3>What to avoid</h3>
           <ul>
-            <li>Weak generic industry pages</li>
-            <li>Over-claiming expertise everywhere</li>
-            <li>Using sectors as the main site structure</li>
+            <li>Do not build the entire site around sectors.</li>
+            <li>Do not over-claim expertise in every market.</li>
+            <li>Do not create empty industry pages that say little of substance.</li>
+            <li>Show range through examples, use cases and case studies instead.</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="eyebrow">Organic growth</div>
-      <h2>Build pages around real engineering intent</h2>
+      <div class="eyebrow">Organic enquiry growth</div>
+      <h2>How the site should support SEO and organic enquiries</h2>
+      <p class="lead">
+        Organic growth should come from pages based around real buyer intent and real engineering problems, not generic awareness content.
+      </p>
       <div class="grid-2">
         <div class="mini">
-          <h3>Examples of strong page ideas</h3>
+          <h3>Examples of strong organic page topics</h3>
           <ul>
             <li>Reverse engineering without CAD</li>
-            <li>High-accuracy GD&amp;T inspection</li>
+            <li>High accuracy GD&amp;T inspection</li>
+            <li>Full ISIR inspection support</li>
             <li>CT scanning for internal geometry</li>
             <li>Large structure scanning</li>
             <li>Recreating legacy parts</li>
@@ -425,8 +468,8 @@
           </ul>
         </div>
         <div class="mini">
-          <h3>Why this is better</h3>
-          <p>These page ideas align with serious buyer intent and are far more likely to bring relevant enquiries than broad awareness content.</p>
+          <h3>Why this matters</h3>
+          <p>These topics align much more closely with the kind of searches serious buyers make when they have an actual need. This should improve both traffic quality and enquiry quality.</p>
         </div>
       </div>
     </section>
@@ -437,17 +480,28 @@
       <div class="grid-3">
         <div class="mini">
           <h3>Visual direction</h3>
-          <p>Clean, technical, structured, confident, not flashy.</p>
+          <p>Clean, technical, structured and professional. It should feel high quality without becoming flashy or overly agency-like.</p>
         </div>
         <div class="mini">
           <h3>Content direction</h3>
-          <p>Clearer, less generic, more grounded in real work and believable use cases.</p>
+          <p>Less generic, less vague engineering language, more grounded in real capabilities, real outputs and real buyer problems.</p>
         </div>
         <div class="mini">
           <h3>UX direction</h3>
-          <p>Make the next step obvious and reduce friction at every stage.</p>
+          <p>Simple to understand, easy to navigate and easy to act on. Users should always know what to do next.</p>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Workflow</div>
+      <h2>How this project will be approached</h2>
+      <ul>
+        <li>Design work will be done in Figma.</li>
+        <li>The longer-term build direction is toward Webflow.</li>
+        <li>The wireframe should act as the structural starting point.</li>
+        <li>The brief should keep the content and positioning on track during the design process.</li>
+      </ul>
     </section>
 
     <section class="section">
@@ -455,28 +509,30 @@
       <h2>How success should be judged</h2>
       <div class="grid-3">
         <div class="mini">
-          <h3>Better enquiries</h3>
-          <p>More relevant leads from both referrals and organic search.</p>
+          <h3>Better quality enquiries</h3>
+          <p>More relevant enquiries from both referral visitors and organic search.</p>
         </div>
         <div class="mini">
-          <h3>Lower bounce rate</h3>
-          <p>Visitors understand the offer faster and engage with more of the site.</p>
+          <h3>Lower bounce and stronger engagement</h3>
+          <p>Visitors should understand the offer faster and spend longer moving through the site.</p>
         </div>
         <div class="mini">
-          <h3>Stronger positioning</h3>
-          <p>The company feels like an engineering partner rather than just a supplier of scanning services.</p>
+          <h3>Stronger business positioning</h3>
+          <p>The company should feel like a capable engineering partner rather than simply a scanning supplier.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="eyebrow">Summary</div>
-      <h2>Simple design direction</h2>
-      <div class="quote">Use the wireframe for structure, the Elementor site for visual inspiration only, and make the final site clearer, more confident and more useful to real buyers.</div>
+      <h2>Simple direction for the project</h2>
+      <div class="quote">
+        Use the wireframe for structure, use the Elementor site only for layout inspiration, and design a website that makes Laser Scanning feel broader, stronger, clearer and easier to engage with.
+      </div>
     </section>
 
     <div class="footer-note">
-      This page should feel like a strategy document, not another homepage. Its job is to guide the design work and keep the project focused.
+      This page should act as the strategy document for the redesign and should be reviewed alongside the live wireframe.
     </div>
   </div>
 </body>
